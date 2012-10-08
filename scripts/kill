@@ -1,0 +1,7 @@
+#!/bin/bash
+
+pkill netserver
+pkill netclient
+
+pgrep -fl netserver
+pgrep -fl netclient
