@@ -4,9 +4,9 @@ source config
 port=12345
 i=0
 while [ $i -lt $nproc ] ; do
-    let port=$port+$i
     ./netserver -size $size -listen -host $localip1 -port $port > server-1-$i.log 2>&1 &
     ./netserver -size $size -listen -host $localip2 -port $port > server-2-$i.log 2>&1 &
+    let port=$port+1
     let i=$i+1
 done
 

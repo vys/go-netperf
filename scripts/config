@@ -1,8 +1,0 @@
-#!/bin/bash
-size=100
-localip1=
-localip2=
-remoteip1=
-remoteip2=
-nconn=10000
-nproc=4

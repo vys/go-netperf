@@ -1,0 +1,8 @@
+#!/bin/bash
+size=100
+localip1=10.36.172.47
+localip2=10.36.172.49
+remoteip1=10.36.161.31
+remoteip2=10.36.161.33
+nconn=10000
+nproc=4
