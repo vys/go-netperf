@@ -1,0 +1,13 @@
+#!/bin/bash
+ulimit -n 100000
+source config
+port=12345
+i=0
+while [ $i -lt $nproc ] ; do
+    let port=$port+$i
+    ./netclient -size $size -host $remoteip1 -port $port -shost $localip1 -nconn $nconn > client-1-$i.log 2>&1 &
+    ./netclient -size $size -host $remoteip2 -port $port -shost $localip2 -nconn $nconn > client-2-$i.log 2>&1 &
+    let i=$i+1
+done
+
+
